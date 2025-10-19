@@ -836,10 +836,11 @@
     .logo span{ display: none; }
     .logo-icon{ height: 17vh; width: 100px; display: flex;
     align-items: center;}
+    .nav-links{font-size: 3vw;}
     .about-img{display: none;}
     /* .nav-links { display: none; } Optionally hide links on very small phones */
-    .slider-section { height: 65vh;  width: 114.5%; margin-top: 45px; }
-    #about,#services,#gallery,#testimonials,#contact,footer{width: 114.5%; }
+    .slider-section { height: 65vh;   margin-top: 45px; }
+    
     .gallery-item{ display: flex; justify-content: center; background-color: transparent;
     position: relative; box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); }
     .gallery-item::before{content: "";width: 82%; position: absolute; left: 9%;}
