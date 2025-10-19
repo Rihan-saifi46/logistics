@@ -884,11 +884,11 @@
 @media (min-width: 765px) and (max-width: 1024px) {
     nav { height: 17vh; padding: 1rem 4%; }
     
-    .nav-links a { font-size: 1.5rem; }
+    .nav-links a { font-size: 1.2rem; }
     .logo-icon{ height: 17vh; width: 100px; display: flex;
     align-items: center;}
      .logo span { display: none; }
-     .logo img { height: 70px;width: 70px;  }
+     .logo img { height: 64px;width: 70px; }
     .nav-links { gap: 1.5rem; }
     .slide-content h1 { font-size: 2.2rem; }
     .slide-content p { font-size: 1.2rem; }
@@ -907,7 +907,7 @@
     nav { height: 17vh; padding: 1rem 6%; }
     .logo { font-size: 1.6rem; }
     .logo span { font-size: 2.5rem; }
-     .logo img { height: 120px; width: 100px; }
+     .logo img { height: 80px; width: 80px;  }
     .nav-links a { font-size: 1.8rem; }
     .slide-content h1 { font-size: 2.4rem; }
     .slide-content p { font-size: 1.3rem; }
@@ -921,7 +921,7 @@
     .nav-container { max-width: 1600px; }
     .slide-content h1 { font-size: 3rem; }
      .logo span { font-size: 2.5rem; }
-     .logo img { height: 120px; width: 100px; }
+     .logo img { height: 100px; width: 100px;  }
      .nav-links a { font-size: 2.3rem; }
     .slide-content p { font-size: 1.4rem; }
     section { max-width: 1500px; }
