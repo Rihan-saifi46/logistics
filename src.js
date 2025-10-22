@@ -127,12 +127,24 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelector('.links');
     const btn = document.querySelector('.menu-btn');
-   
+    const slider = document.querySelector('.slider-section'); // slider ke baad ka content
+
     btn.addEventListener('click', () => {
         links.classList.toggle('active');
-        console.log('Toggle clicked'); // check if click works
+
+        if (links.classList.contains('active')) {
+            const height = links.scrollHeight;
+            links.style.maxHeight = height + 'px';
+
+            // Push slider-section + baaki content down
+            slider.style.marginTop = height + 'px';
+        } else {
+            links.style.maxHeight = '0';
+            slider.style.marginTop = '0';
+        }
     });
 });
+
         document.querySelectorAll('.service-card, .gallery-item, .info-item').forEach(el => {
             observer.observe(el);
         });
