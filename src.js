@@ -30,30 +30,63 @@
         });
 
         // Slider functionality
-        let currentSlide = 0;
-        const slider = document.getElementById('slider');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = 3;
+//         let currentSlide = 0;
+//         const slider = document.getElementById('slider');
+//         const dots = document.querySelectorAll('.dot');
+//         const totalSlides = 3;
 
-        function goToSlide(n) {
-            currentSlide = n;
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-            updateDots();
-        }
+//         function goToSlide(n) {
+//     currentSlide = n;
+//     const slideWidth = slider.clientWidth; // poore slider container ki width
+//     slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+//     updateDots();
+// }
+//         function nextSlide() {
+//             currentSlide = (currentSlide + 1) % totalSlides;
+//             goToSlide(currentSlide);
+//         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            goToSlide(currentSlide);
-        }
-
-        function updateDots() {
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
+//         function updateDots() {
+//             dots.forEach((dot, index) => {
+//                 dot.classList.toggle('active', index === currentSlide);
+//             });
+//         }
 
         // Auto slide
-        setInterval(nextSlide, 5000);
+        // setInterval(nextSlide, 5000);
+let currentSlide = 0;
+const slider = document.getElementById('slider');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+// Go to specific slide
+function goToSlide(n) {
+    currentSlide = n;
+    const slideWidth = slider.clientWidth; // get full container width
+    slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    updateDots();
+}
+
+// Next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+}
+
+// Update active dot
+function updateDots() {
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Optional: handle window resize to recalc width
+window.addEventListener('resize', () => {
+    goToSlide(currentSlide);
+});
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -89,7 +122,17 @@
                 }
             });
         }, observerOptions);
-
+  
+   
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelector('.links');
+    const btn = document.querySelector('.menu-btn');
+   
+    btn.addEventListener('click', () => {
+        links.classList.toggle('active');
+        console.log('Toggle clicked'); // check if click works
+    });
+});
         document.querySelectorAll('.service-card, .gallery-item, .info-item').forEach(el => {
             observer.observe(el);
         });

@@ -24,19 +24,19 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
-            <div style="display: flex; display: none; flex-direction: column;" class="lines">
-                <i style="  padding-right: 8vw; position: relative;" class="fa-solid fa-grip-lines"></i>
+            <div  class="lines">
+                <i class="menu-btn fa-solid fa-grip-lines"></i>
                    <ul class="links">
-                <li ><a style="color: #111; font-weight: 600; text-decoration: none;" href="#home">Home</a></li>
-                <li ><a style="color: #111; font-weight: 600; text-decoration: none;" href="#about">About</a></li>
-                <li ><a style="color: #111; font-weight: 600; text-decoration: none;" href="#services">Services</a></li>
-                <li ><a style="color: #111; font-weight: 600; text-decoration: none;" href="#gallery">Gallery</a></li>
+                <li ><a href="#home">Home</a></li>
+                <li ><a href="#about">About</a></li>
+                <li ><a  href="#services">Services</a></li>
+                <li ><a  href="#gallery">Gallery</a></li>
             </ul>
             </div>
            
         </div>
     </nav>
-     <div class="slider-section" id="home">
+     <!-- <div class="slider-section" id="home">
         <div class="slider" id="slider">
             <div class="slide slide1">
                 <div class="slide-content">
@@ -65,8 +65,39 @@
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
+    </div> -->
+    <div class="slider-section" id="home">
+    <div class="slider" id="slider">
+        <div class="slide slide1">
+            <div class="slide-content">
+                <h1>Swift & Reliable Transportation</h1>
+                <p>Your trusted partner in logistics solutions across the nation</p>
+                <button class="cta-btn">Get Started</button>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="slide-content">
+                <h1>On-Time Delivery Guaranteed</h1>
+                <p>24/7 tracking and customer support for peace of mind</p>
+                <button class="cta-btn">Track Shipment</button>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="slide-content">
+                <h1>Nationwide Coverage</h1>
+                <p>Connecting businesses with efficiency and excellence</p>
+                <button class="cta-btn">Learn More</button>
+            </div>
+        </div>
     </div>
-     </div>
+    <div class="slider-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+</div>
+
+</div>
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title">About Us</h2>
@@ -259,7 +290,7 @@
         </div>
     </footer>
 
-   <script src="./fin.js"></script>
+   <script src="./src.js"></script>
 </body>
 </html>
            
