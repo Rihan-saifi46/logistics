@@ -594,6 +594,13 @@
             color: #bbb;
             font-size: 0.9rem;
         }
+        .links{
+    position: absolute; padding: 1vw 2vw; top: 7vw; right: 1vw; display: flex; list-style: none; display: none;
+    flex-direction: column; gap: 2vw; background-color: #ffff; color: #111;
+    
+}
+.lines:hover .links{display: block;
+transition: all .5s;}
 
         @keyframes fadeIn {
             from {
@@ -834,6 +841,7 @@
 @media (max-width: 480px) {
     nav { padding: 0.6rem 2%; height: 14vh; }
     .logo span{ display: none; }
+    .lines{display: block;}
     .logo-icon{ height: 17vh; width: 100px; display: flex;
     align-items: center;}
     .nav-links{font-size: 3vw;}
